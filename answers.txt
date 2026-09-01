@@ -1,0 +1,9 @@
+Lab Part 1- create a repository
+1. what message appears after running git init?
+/Users/Student/Desktop/lab0_gitlab/.git/
+2.what hidden folder was created?
+
+Lab Part 3- check repository Status
+1. what color is the filename?
+
+2.whatdoes "Untracked" mean
