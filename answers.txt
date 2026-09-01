@@ -7,3 +7,29 @@ Lab Part 3- check repository Status
 1. what color is the filename?
 
 2.whatdoes "Untracked" mean
+
+Lab Part -4 - stage Changes 
+1.why do you think Git requies a staging area?
+select
+
+Lab Part5 -commit Changes
+1. what is the commit message?
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   answers.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Student\Desktop\lab0_gitlab> 
+2. what is the display after running git log?
+commit c1f8be83a95c2e69d322b7d17e1d8168ae8f5547 (HEAD -> master)
+Author: Student <Student@et.qcc.edu>
+Date:   Tue Sep 1 15:24:17 2026 -0400
+
+    README file created
+PS C:\Users\Student\D
+
+Lab Part 8 - make Another Changes
+1.Do you see the changes in the remote repository?
+not see every thing in my repository but see every thing i my vscode
