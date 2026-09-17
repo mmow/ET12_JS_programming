@@ -1,0 +1,22 @@
+body{
+    background-color: aquamarine;
+}
+
+div.qcc{
+    background-color: blueviolet;
+    text-align: center;
+    color: antiquewhite;
+    padding-top: 20px;
+
+    height: 7rem;
+}
+div.ET{
+    border: ridge 2px white;
+    padding: 10px;
+    background-color: goldenrod;
+    width: 80%;
+    margin: opx auto;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+h2.greet{text-align: center;}
