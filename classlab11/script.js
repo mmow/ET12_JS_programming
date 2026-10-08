@@ -63,16 +63,20 @@ console.log("------LAB Exercise 1")
 const mycalculator = {
     //properties
     message:"Square calculator",
+    side:2,
     description: "a text message calculate the area of a square and methods",
     //methods
     area_sqare(side){
-        return Math.pow(side, 2)
+        return Math.pow(side, 2);
     },
     volume_cube(side){
-        return Math.pow(side, 3)
+        return Math.pow(side, 3);
     }
     
     }
+    //display results
+    console.log("Area of square:" mycalculator.area_sqare());
+
 
 console.log("\n------ Lab Exercise 2: Exception Handling -----");
 function readProperty(obj, prop) {

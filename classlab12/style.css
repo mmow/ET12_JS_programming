@@ -1,0 +1,48 @@
+*{box-sizing: border-box;}
+
+.shapecontainer {
+    background-color: azure;
+    border: solid darkblue;
+    width: 500px;
+    margin: 0 auto;
+}
+.shape,.rectangle,.circle,.square {
+    background-color: darkblue;
+    width: 200px;
+    height: 200px;
+    margin:2rem auto;
+    color:whitesmoke;
+    font-size: 2rem;
+    padding: 30%;
+}
+.btnSquare,.btnRectangle,.btnCircle{
+    background-color:olivedrab;
+    border:none;
+    border-radius: 10px;
+    color:whitesmoke;
+    width: 30%;
+    margin:1%
+
+}
+.btnSquare:hover,.btnRectangle:hover,.btnCircle:hover{
+    font-weight: bolder;
+    background-color: darkslateblue;
+    cursor: pointer;
+}
+.rectangle{
+    width: 300px;
+    height: 200px;
+    background-color: darkblue;
+
+}
+.circle{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(139, 0, 97);
+    border-radius: 50%;
+}
+.square{
+    width: 200px;
+    height: 200px;
+    background-color: darkcyan;
+}
