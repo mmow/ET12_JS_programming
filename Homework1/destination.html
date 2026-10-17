@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover the World | Travel Explorer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f3ef;
+            color: #172b3a;
+        }
+
+        /* Navigation */
+        header {
+            background-color: #102a43;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            color: white;
+            font-size: 23px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 22px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #ffb347;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 380px;
+            padding: 100px 8%;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(9, 28, 43, 0.88),
+                    rgba(9, 28, 43, 0.2)
+                ),
+                url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80");
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 6vw, 65px);
+            max-width: 650px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.7;
+            max-width: 500px;
+        }
+
+        .hero-button {
+            display: inline-block;
+            margin-top: 25px;
+            background-color: #ffb347;
+            color: #172b3a;
+            padding: 13px 24px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        .hero-button:hover {
+            background-color: white;
+        }
+
+        /* Destination Section */
+        .destinations {
+            padding: 65px 8%;
+        }
+
+        .section-label {
+            color: #d97706;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .section-heading {
+            font-size: 36px;
+            margin: 12px 0;
+        }
+
+        .section-description {
+            color: #596773;
+            line-height: 1.7;
+            margin-bottom: 35px;
+        }
+
+        /* Destination Layout */
+        .destination-list {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .destination {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+            transition: transform 0.3s ease;
+        }
+
+        .destination:hover {
+            transform: translateY(-7px);
+        }
+
+        .destination img {
+            display: block;
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .destination-info {
+            padding: 22px;
+        }
+
+        .destination-number {
+            color: #d97706;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .destination h3 {
+            font-size: 23px;
+            margin: 10px 0;
+        }
+
+        .destination p {
+            color: #596773;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* Travel Inspiration Banner */
+        .travel-banner {
+            margin: 0 8% 65px;
+            padding: 40px;
+            background-color: #dce8e8;
+            border-left: 6px solid #d97706;
+        }
+
+        .travel-banner h2 {
+            margin-bottom: 12px;
+            font-size: 28px;
+        }
+
+        .travel-banner p {
+            line-height: 1.7;
+            color: #405563;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #102a43;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        footer p {
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* Tablet Layout */
+        @media (max-width: 900px) {
+            .destination-list {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            header {
+                padding: 20px 5%;
+            }
+
+            nav a {
+                margin-left: 12px;
+            }
+        }
+
+        /* Mobile Layout */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 14px;
+            }
+
+            nav a {
+                margin-left: 0;
+            }
+
+            .hero {
+                padding: 75px 6%;
+            }
+
+            .destinations {
+                padding: 45px 6%;
+            }
+
+            .destination-list {
+                grid-template-columns: 1fr;
+            }
+
+            .travel-banner {
+                margin: 0 6% 45px;
+                padding: 25px;
+            }
+
+            .section-heading {
+                font-size: 29px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <a href="index.html" class="logo">TRAVEL / EXPLORER</a>
+
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="destinations.html">Discover</a>
+            <a href="plan.html">Plan a Trip</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Your Next Adventure Starts Here.</h1>
+
+        <p>
+            From peaceful tropical islands to exciting city streets,
+            discover places that inspire you to see more of the world.
+        </p>
+
+        <a href="#places" class="hero-button">Explore Places</a>
+    </section>
+
+    <!-- Destination Collection -->
+    <main>
+        <section class="destinations" id="places">
+            <span class="section-label">The World Awaits</span>
+
+            <h2 class="section-heading">Where Will You Go Next?</h2>
+
+            <p class="section-description">
+                Find inspiration for your next getaway.
+                Every destination has a story worth discovering.
+            </p>
+
+            <div class="destination-list">
+
+                <!-- Destination 1 -->
+                <article class="destination">
+                    <img
+                        src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80"
+                        alt="Colorful coastal villages in Italy"
+                        loading="lazy"
+                    >
+
+                    <div class="destination-info">
+                        <span class="destination-number">01 / EUROPE</span>
+                        <h3>Amalfi Coast, Italy</h3>
+                        <p>
+                            Discover colorful seaside villages, beautiful
+                            coastlines, Italian food, and peaceful ocean views.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Destination 2 -->
+                <article class="destination">
+                    <img
+                        src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80"
+                        alt="Tokyo city streets and tall buildings"
+                        loading="lazy"
+                    >
+
+                    <div class="destination-info">
+                        <span class="destination-number">02 / ASIA</span>
+                        <h3>Tokyo, Japan</h3>
+                        <p>
+                            Explore anime culture, delicious street food,
+                            modern technology, and lively shopping districts.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Destination 3 -->
+                <article class="destination">
+                    <img
+                        src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80"
+                        alt="Beautiful mountain lake surrounded by nature"
+                        loading="lazy"
+                    >
+
+                    <div class="destination-info">
+                        <span class="destination-number">03 / NATURE</span>
+                        <h3>Swiss Alps, Switzerland</h3>
+                        <p>
+                            Enjoy mountain views, fresh air, scenic train
+                            rides, and peaceful lakeside villages.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Destination 4 -->
+                <article class="destination">
+                    <img
+                        src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=800&q=80"
+                        alt="Tropical beach with clear blue water"
+                        loading="lazy"
+                    >
+
+                    <div class="destination-info">
+                        <span class="destination-number">04 / ISLANDS</span>
+                        <h3>Bali, Indonesia</h3>
+                        <p>
+                            Relax on tropical beaches, visit green rice
+                            terraces, and experience local traditions.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Destination 5 -->
+                <article class="destination">
+                    <img
+                        src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80"
+                        alt="Modern skyline of Dubai"
+                        loading="lazy"
+                    >
+
+                    <div class="destination-info">
+                        <span class="destination-number">05 / MIDDLE EAST</span>
+                        <h3>Dubai, UAE</h3>
+                        <p>
+                            See impressive architecture, explore markets,
+                            shop in modern malls, and visit the desert.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Destination 6 -->
+                <article class="destination">
+                    <img
+                        src="https://images.unsplash.com/photo-1618828665011-0abd973f7bb8?auto=format&fit=crop&w=800&q=80"
+                        alt="Lagos, Nigeria"
+                        loading="lazy"
+                    >
+
+                    <div class="destination-info">
+                        <span class="destination-number">06 / AFRICA</span>
+                        <h3>Lagos, Nigeria</h3>
+                        <p>
+                            Experience Nigerian music, local food,
+                            vibrant markets, beaches, and city life.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Travel Inspiration -->
+        <section class="travel-banner">
+            <h2>Collect Moments, Not Just Miles.</h2>
+
+            <p>
+                Travel is an opportunity to learn, meet new people,
+                experience different cultures, and create memories.
+                Start exploring one destination at a time.
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            &copy; 2026 Travel Explorer
+            <br>
+            Discover new places. Create unforgettable memories.
+        </p>
+    </footer>
+
+</body>
+</html>
