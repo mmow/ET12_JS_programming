@@ -1,6 +1,6 @@
 
 /*
-Name: Your Name
+Name: Mamtaz Mow
 Course: JavaScript Programming
 Lab Experiment: DOM Events and AI Assistance
 Date: October 17, 2026
