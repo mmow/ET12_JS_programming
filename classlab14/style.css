@@ -1,0 +1,75 @@
+.maincontainer,.gallerycontainer{
+    width:1000px;
+    height: 300px;
+    margin: auto;
+}
+.maincontainer{
+    position: relative;
+    z-index: 0;
+}
+.gallerycontainer{
+    overflow-x: scroll;
+    white-space: nowrap; /*ensure all images are in one line*/
+    position: relative;
+    z-index: 1;
+  }
+  .galleryimage{
+    display: inline-block;
+    width: 500px;
+    margin: -2px;
+    height: 350px;
+
+  }
+.btnright, .btnleft{
+    position: absolute;
+    z-index: 2;
+    top: 40%
+}
+.btnright{
+    right: 2%;
+}
+.btnleft{
+    left: 2%;
+}
+
+/*form events*/
+#myForm{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: azure;
+    width: 300px;
+    margin: 5rem auto;
+    padding: 3rem 5rem;
+}
+.submitbtn{
+    background-color:crimson;
+    padding: 0.5rem 2rem;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 3rem;
+    width: 100%;
+}
+.submitbtn:hover{
+    background-color:#333;
+}
+.msg{
+    font-size: 1.5em;
+    color: crimson;
+    width: 300px;
+    margin: auto;
+
+}
+.passwordmsg{
+    color: red;
+    font-size: 0.8rem;
+}
+#passwordError{
+    color: crimson;
+    font-style: italic;
+}
+.formsession{
+    margin-top: 1rem;
+}
+
+    
