@@ -1,0 +1,759 @@
+
+/* =====================================
+   LITTLE LEARNERS - PRE-K KIDS THEME
+   ===================================== */
+
+:root {
+  --pink: #ffb6d5;
+  --purple: #cbb7ff;
+  --blue: #a9e4ff;
+  --yellow: #ffe58f;
+  --green: #b8f2c8;
+  --orange: #ffc99b;
+  --cream: #fffaf0;
+  --dark: #493b66;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  font-family: "Trebuchet MS", "Comic Sans MS", sans-serif;
+  background-color: var(--cream);
+  color: var(--dark);
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 4px dashed #7653c5;
+  outline-offset: 5px;
+}
+
+/* =====================================
+   HEADER AND NAVIGATION
+   ===================================== */
+
+.site-header {
+  background: #ffffff;
+  padding: 18px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 5px 0 #f0e5ff;
+  border-bottom: 3px solid #f2eaff;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #8054c7;
+  letter-spacing: -1px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+nav a {
+  padding: 9px 15px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: #f4ecff;
+  transition: transform 0.2s, background 0.2s;
+}
+
+nav a:nth-child(2) {
+  background: #ffe5ef;
+}
+
+nav a:nth-child(3) {
+  background: #fff0bd;
+}
+
+nav a:nth-child(4) {
+  background: #dff8e7;
+}
+
+nav a:nth-child(5) {
+  background: #dff3ff;
+}
+
+nav a:hover {
+  transform: translateY(-4px) rotate(-2deg);
+  background: var(--yellow);
+}
+
+/* =====================================
+   HERO / WELCOME SECTION
+   ===================================== */
+
+.hero {
+  min-height: 410px;
+  padding: 65px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+  background: linear-gradient(
+    135deg,
+    #ffe1ee,
+    #eee4ff,
+    #dff5ff,
+    #fff0be
+  );
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.welcome-label {
+  display: inline-block;
+  background: white;
+  color: #8054c7;
+  padding: 8px 17px;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 0 #dfd0ff;
+}
+
+.hero h1 {
+  color: #6745a4;
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-weight: 900;
+  line-height: 1.2;
+  margin: 20px 0;
+  text-shadow: 3px 3px 0 white;
+}
+
+.hero p {
+  max-width: 530px;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  color: #514365;
+}
+
+.hero-art {
+  min-width: 220px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  text-align: center;
+}
+
+.hero-art span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  width: 95px;
+  height: 95px;
+  border-radius: 30px;
+  font-size: 3.5rem;
+  box-shadow: 0 7px 0 #e4d9f8;
+  animation: float 3s ease-in-out infinite;
+}
+
+.hero-art span:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.hero-art span:nth-child(3) {
+  animation-delay: 1s;
+}
+
+.hero-art span:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* =====================================
+   START LEARNING BUTTONS
+   ===================================== */
+
+.button {
+  display: inline-block;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 25px;
+  font-size: 1.05rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.primary-button {
+  color: #ffffff;
+  background: #8a63d2;
+  box-shadow: 0 6px 0 #63449f;
+}
+
+.secondary-button {
+  color: #493b66;
+  background: #ffe58f;
+  box-shadow: 0 5px 0 #e8c65d;
+}
+
+.button:hover:not(:disabled) {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 0 #cbb7ff;
+}
+
+.button:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #cbb7ff;
+}
+
+.button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* =====================================
+   HAPPY MESSAGE STRIP
+   ===================================== */
+
+.welcome-strip {
+  background: #fff0ad;
+  padding: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+  border-top: 3px dashed #ffd76c;
+  border-bottom: 3px dashed #ffd76c;
+  font-weight: bold;
+}
+
+.welcome-strip span {
+  font-size: 1.5rem;
+}
+
+/* =====================================
+   LEARNING SECTIONS
+   ===================================== */
+
+.learning-section {
+  padding: 65px 7%;
+  background: #fffaf0;
+  scroll-margin-top: 100px;
+}
+
+.learning-section.alternate {
+  background: #f0eaff;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-icon {
+  display: inline-block;
+  font-size: 3rem;
+  animation: wiggle 3s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(-8deg);
+  }
+
+  75% {
+    transform: rotate(8deg);
+  }
+}
+
+.section-heading h2 {
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+  color: #6745a4;
+  font-weight: 900;
+  margin: 8px 0;
+}
+
+.section-heading p {
+  font-size: 1.1rem;
+  color: #716580;
+}
+
+/* =====================================
+   LEARNING CARDS
+   ===================================== */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 22px;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.learning-card {
+  min-width: 0;
+  min-height: 175px;
+  padding: 20px 12px;
+  background: white;
+  border: 3px solid #f0e7ff;
+  border-radius: 28px;
+  box-shadow: 0 7px 0 #e8def8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--dark);
+  text-align: center;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.learning-card:nth-child(5n + 1) {
+  background: #fff0f5;
+  border-color: #ffd6e7;
+  box-shadow: 0 7px 0 #f6d1e1;
+}
+
+.learning-card:nth-child(5n + 2) {
+  background: #eff8ff;
+  border-color: #d1edff;
+  box-shadow: 0 7px 0 #c9e7fa;
+}
+
+.learning-card:nth-child(5n + 3) {
+  background: #fff9df;
+  border-color: #ffebac;
+  box-shadow: 0 7px 0 #f4e3a3;
+}
+
+.learning-card:nth-child(5n + 4) {
+  background: #effff2;
+  border-color: #ccefd5;
+  box-shadow: 0 7px 0 #c8e9d0;
+}
+
+.learning-card:nth-child(5n + 5) {
+  background: #f5efff;
+  border-color: #e0d0ff;
+  box-shadow: 0 7px 0 #d8c8f4;
+}
+
+.learning-card:hover {
+  transform: translateY(-7px) rotate(-2deg);
+}
+
+.learning-card:active {
+  transform: translateY(2px);
+}
+
+.learning-card.visited {
+  border-color: #52c78a;
+  box-shadow: 0 5px 0 #9bdcb7;
+}
+
+.card-emoji {
+  font-size: 3rem;
+  line-height: 1.3;
+}
+
+.card-name {
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+.card-hint {
+  font-size: 0.85rem;
+  color: #6d627b;
+}
+
+.color-swatch {
+  display: block;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: 4px solid white;
+  outline: 2px solid #e3d8ef;
+  box-shadow: 0 4px 0 #e3d8ef;
+}
+
+/* =====================================
+   QUIZ SECTION
+   ===================================== */
+
+.quiz-section {
+  padding: 65px 7%;
+  background: linear-gradient(135deg, #dff5ff, #eee3ff, #ffe7f0);
+  scroll-margin-top: 100px;
+}
+
+.quiz-card {
+  max-width: 700px;
+  margin: auto;
+  padding: 38px;
+  text-align: center;
+  background: white;
+  border: 4px solid #e6d9ff;
+  border-radius: 35px;
+  box-shadow: 0 9px 0 #d8c9f3;
+}
+
+.quiz-icon {
+  font-size: 3.5rem;
+}
+
+.quiz-card h2 {
+  font-size: 2.2rem;
+  color: #6745a4;
+  margin: 10px 0;
+}
+
+.quiz-card > p {
+  color: #716580;
+}
+
+.quiz-progress {
+  display: inline-block;
+  margin: 22px 0;
+  padding: 9px 18px;
+  border-radius: 25px;
+  background: #fff0ad;
+  font-weight: 900;
+}
+
+.quiz-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 20px;
+}
+
+.quiz-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.quiz-option {
+  padding: 15px;
+  background: #f3ecff;
+  border: 3px solid #dfd0ff;
+  border-radius: 20px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: var(--dark);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.quiz-option:hover:not(:disabled) {
+  transform: scale(1.04);
+  background: #e5d8ff;
+}
+
+.quiz-option.correct {
+  background: #d8f8e3;
+  border-color: #5bc88a;
+}
+
+.quiz-option.incorrect {
+  background: #ffe1e1;
+  border-color: #ff9292;
+}
+
+.quiz-feedback {
+  min-height: 40px;
+  margin: 18px 0;
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+
+.quiz-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* =====================================
+   LEARNING PROGRESS
+   ===================================== */
+
+.progress-section {
+  padding: 60px 7%;
+  text-align: center;
+  background: #fff9df;
+}
+
+.progress-section h2 {
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+  color: #6745a4;
+  margin-bottom: 12px;
+}
+
+.progress-section > p {
+  font-size: 1.05rem;
+}
+
+.progress-track {
+  max-width: 600px;
+  height: 28px;
+  margin: 22px auto;
+  background: white;
+  border: 3px solid #e6d9ff;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  width: 0;
+  height: 100%;
+  border-radius: 30px;
+  background: linear-gradient(
+    90deg,
+    #ff9ec7,
+    #ffcf70,
+    #8be0b1,
+    #8dcfff,
+    #bd9cff
+  );
+  transition: width 0.5s ease;
+}
+
+#reset-progress {
+  margin-top: 15px;
+}
+
+/* =====================================
+   FOOTER
+   ===================================== */
+
+.site-footer {
+  background: #6745a4;
+  color: white;
+  padding: 35px 18px;
+  text-align: center;
+  border-top: 7px solid #cbb7ff;
+}
+
+.site-footer p {
+  margin: 5px 0;
+}
+
+.footer-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 17px;
+  border-radius: 25px;
+  background: white;
+  color: #6745a4;
+  font-weight: bold;
+}
+
+.footer-link:hover {
+  background: #fff0ad;
+}
+
+/* =====================================
+   WELCOME POPUP
+   ===================================== */
+
+.welcome-dialog {
+  width: min(90%, 440px);
+  margin: auto;
+  padding: 35px;
+  text-align: center;
+  color: var(--dark);
+  background: #fffaf0;
+  border: 5px solid #e2d4ff;
+  border-radius: 35px;
+  box-shadow: 0 12px 0 rgba(86, 59, 130, 0.15);
+}
+
+.welcome-dialog::backdrop {
+  background: rgba(59, 44, 83, 0.65);
+}
+
+.dialog-emoji {
+  font-size: 4rem;
+}
+
+.dialog-content h2 {
+  font-size: 1.8rem;
+  color: #6745a4;
+  margin: 12px 0;
+}
+
+.dialog-content p {
+  margin-bottom: 22px;
+}
+
+/* =====================================
+   BACK TO TOP BUTTON
+   ===================================== */
+
+.back-to-top {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border: 3px solid white;
+  border-radius: 50%;
+  background: #ffb6d5;
+  color: #493b66;
+  font-size: 2rem;
+  font-weight: bold;
+  box-shadow: 0 5px 0 #e78eb7;
+  cursor: pointer;
+  z-index: 50;
+}
+
+.back-to-top.visible {
+  display: flex;
+}
+
+.back-to-top:hover {
+  transform: translateY(-4px);
+}
+
+/* =====================================
+   ACCESSIBILITY
+   ===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* Give every page section its own colorful card. */
+main {
+  padding: 1px 0 30px;
+}
+
+.hero,
+.welcome-strip,
+.learning-section,
+.quiz-section,
+.progress-section {
+  width: calc(100% - 40px);
+  max-width: 1250px;
+  margin: 24px auto;
+  border: 3px solid #e8def8;
+  border-radius: 30px;
+  box-shadow: 0 8px 0 #e8def8;
+}
+
+.hero {
+  background: linear-gradient(135deg, #ffe1ee, #eee4ff, #dff5ff);
+}
+
+.welcome-strip {
+  background: #fff3b0;
+  border-color: #ffe18a;
+  box-shadow: 0 8px 0 #ffe18a;
+}
+
+#colors {
+  background: #ffeaf0;
+  border-color: #ffd3e0;
+  box-shadow: 0 8px 0 #ffd3e0;
+}
+
+#numbers {
+  background: #e7f5ff;
+  border-color: #c9e8fb;
+  box-shadow: 0 8px 0 #c9e8fb;
+}
+
+#animals {
+  background: #e9f8e9;
+  border-color: #cceacc;
+  box-shadow: 0 8px 0 #cceacc;
+}
+
+#shapes {
+  background: #f1eaff;
+  border-color: #d9c9f5;
+  box-shadow: 0 8px 0 #d9c9f5;
+}
+
+.quiz-section {
+  background: #fff0e3;
+  border-color: #ffddc3;
+  box-shadow: 0 8px 0 #ffddc3;
+}
+
+.progress-section {
+  background: #fff9df;
+  border-color: #f4e7ac;
+  box-shadow: 0 8px 0 #f4e7ac;
+}
+
+@media (max-width: 600px) {
+  .hero,
+  .welcome-strip,
+  .learning-section,
+  .quiz-section,
+  .progress-section {
+    width: calc(100% - 24px);
+    margin: 16px auto;
+    border-radius: 22px;
+  }
+}

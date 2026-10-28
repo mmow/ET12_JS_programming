@@ -1,20 +1,33 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Click Counter</title>
-
+    <title>Simple Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Click Counter</h1>
-    <p>Click the circle to increase the count!</p>
+    <div class="calculator">
+        <h1>Simple Calculator</h1>
 
-    <div id="circle">0</div>
+        <label for="num1">Enter First Number:</label>
+        <input type="number" id="num1" placeholder="First number" step="any">
 
-    <button id="resetBtn">Reset</button>
+        <label for="num2">Enter Second Number:</label>
+        <input type="number" id="num2" placeholder="Second number" step="any">
+
+        <div class="buttons">
+            <button id="add">+</button>
+            <button id="subtract">−</button>
+            <button id="multiply">×</button>
+            <button id="divide">÷</button>
+        </div>
+
+        <p id="result">Result will appear here.</p>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

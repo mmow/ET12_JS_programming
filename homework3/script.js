@@ -6,26 +6,84 @@ Lab Experiment: DOM Events and AI Assistance
 Date: October 17, 2026
 */
 
-console.log("\n------ Lab Exercise: Click Counter Circle ------");
+const num1 = document.querySelector("#num1");
+const num2 = document.querySelector("#num2");
+const result = document.querySelector("#result");
 
-// Collect the circle and the reset button
-const circle = document.getElementById("circle");
-const resetBtn = document.getElementById("resetBtn");
+const addBtn = document.querySelector("#add");
+const subtractBtn = document.querySelector("#subtract");
+const multiplyBtn = document.querySelector("#multiply");
+const divideBtn = document.querySelector("#divide");
 
-// Initialize the counter
-let counter = 0;
+// Function to get input values and validate them
+function calculate(operation) {
+    if (num1.value.trim() === "" || num2.value.trim() === "") {
+        result.textContent = "Error: Please enter both numbers.";
+        return;
+    }
 
-// Increment counter when circle is clicked
-circle.addEventListener("click", function() {
-    counter++;
-    circle.textContent = counter;
+    const a = Number(num1.value);
+    const b = Number(num2.value);
+    let answer;
+
+    // Perform the selected operation
+    switch (operation) {
+        case "add":
+            answer = a + b;
+            break;
+
+        case "subtract":
+            answer = a - b;
+            break;
+
+        case "multiply":
+            answer = a * b;
+            break;
+
+        case "divide":
+            if (b === 0) {
+                result.textContent = "Error: Cannot divide by zero!";
+                return;
+            }
+            answer = a / b;
+            break;
+    }
+
+    result.textContent = "Result: " + answer;
+}
+
+// Click event listeners
+addBtn.addEventListener("click", function () {
+    calculate("add");
 });
 
-// Reset counter when Reset button is clicked
-resetBtn.addEventListener("click", function() {
-    counter = 0;
-    circle.textContent = counter;
+subtractBtn.addEventListener("click", function () {
+    calculate("subtract");
 });
+
+multiplyBtn.addEventListener("click", function () {
+    calculate("multiply");
+});
+
+divideBtn.addEventListener("click", function () {
+    calculate("divide");
+});
+
+// Mouseover and mouseout events
+const buttons = document.querySelectorAll(".buttons button");
+
+buttons.forEach(function (button) {
+    const originalColor = getComputedStyle(button).backgroundColor;
+
+    button.addEventListener("mouseover", function () {
+        button.style.backgroundColor = "#333";
+    });
+
+    button.addEventListener("mouseout", function () {
+        button.style.backgroundColor = originalColor;
+    });
+});
+
 
 /*
 AI Assistance:

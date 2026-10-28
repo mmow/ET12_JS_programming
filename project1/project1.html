@@ -1,0 +1,142 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A fun and interactive learning website for preschool children.">
+  <title>Little Learners | Pre-K Adventure</title>
+
+  <link rel="stylesheet" href="scriptproject1.css">
+  <script src="project1.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="#home" class="logo" aria-label="Little Learners home">
+      🌈 Little Learners
+    </a>
+
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#colors">Colors</a>
+      <a href="#numbers">Numbers</a>
+      <a href="#animals">Animals</a>
+      <a href="#shapes">Shapes</a>
+      
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="welcome-label">A WORLD OF FUN AND LEARNING</span>
+        <h1>Let's Learn and Play! 🎈</h1>
+        <p>
+          Welcome, little learner! Explore colors, numbers,
+          animals, and shapes. Click, discover, and have fun!
+        </p>
+        <a href="#colors" class="button primary-button">
+          Start Learning 🚀
+        </a>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <span>🌈</span>
+        <span>☀️</span>
+        <span>🦋</span>
+        <span>🌼</span>
+      </div>
+    </section>
+
+    <section class="welcome-strip">
+      <span>⭐</span>
+      <p>Every day is a new adventure. Let's learn something new!</p>
+      <span>⭐</span>
+    </section>
+
+    <section class="learning-section" id="colors">
+      <div class="section-heading">
+        <span class="section-icon">🎨</span>
+        <h2>Let's Learn Colors!</h2>
+        <p>Tap a color card to discover its name.</p>
+      </div>
+      <div class="card-grid" id="color-grid"></div>
+    </section>
+
+    <section class="learning-section alternate" id="numbers">
+      <div class="section-heading">
+        <span class="section-icon">🔢</span>
+        <h2>Let's Count Together!</h2>
+        <p>Explore numbers from 1 to 10.</p>
+      </div>
+      <div class="card-grid" id="number-grid"></div>
+    </section>
+
+    <section class="learning-section" id="animals">
+      <div class="section-heading">
+        <span class="section-icon">🐾</span>
+        <h2>Meet the Animals!</h2>
+        <p>Meet new animal friends and learn their names.</p>
+      </div>
+      <div class="card-grid" id="animal-grid"></div>
+    </section>
+
+    <section class="learning-section alternate" id="shapes">
+      <div class="section-heading">
+        <span class="section-icon">⭐</span>
+        <h2>Discover Shapes!</h2>
+        <p>Look at the shapes. Can you name them?</p>
+      </div>
+      <div class="card-grid" id="shape-grid"></div>
+    </section>
+
+    <section class="quiz-section" id="quiz">
+      <div class="quiz-card">
+        <span class="quiz-icon">🧠</span>
+        <h2>Time for a Fun Quiz!</h2>
+        <p>Let's see what you have learned today.</p>
+
+        <div class="quiz-progress">
+          Question <span id="question-number">1</span> of 5
+        </div>
+
+        <h3 id="quiz-question">Which one is a color?</h3>
+        <div class="quiz-options" id="quiz-options"></div>
+        <p id="quiz-feedback" class="quiz-feedback"
+           aria-live="polite"></p>
+
+        <div class="quiz-actions">
+          <button id="next-question" class="button primary-button"
+                  disabled>
+            Next Question ➜
+          </button>
+          <button id="restart-quiz" class="button secondary-button"
+                  hidden>
+            Play Again 🔄
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="progress-section" aria-live="polite">
+      <h2>Look How Much You've Learned! 🏆</h2>
+      <p>You have explored
+        <strong id="progress-count">0</strong> learning cards!
+      </p>
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+      <p id="progress-message">Your learning adventure starts here!</p>
+      <button id="reset-progress" class="button secondary-button">
+        Start Fresh
+      </button>
+    </section>
+
+  </main>
+
+  
+
+</body>
+</html>
