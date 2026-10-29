@@ -577,7 +577,7 @@ nav a:hover {
 
 .site-footer {
   background: #6745a4;
-  color: white;
+  color: rgb(255, 255, 255);
   padding: 35px 18px;
   text-align: center;
   border-top: 7px solid #cbb7ff;
@@ -598,7 +598,7 @@ nav a:hover {
 }
 
 .footer-link:hover {
-  background: #fff0ad;
+  background: #ffade2;
 }
 
 /* =====================================
@@ -618,7 +618,7 @@ nav a:hover {
 }
 
 .welcome-dialog::backdrop {
-  background: rgba(59, 44, 83, 0.65);
+  background: rgba(44, 83, 62, 0.65);
 }
 
 .dialog-emoji {

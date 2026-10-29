@@ -366,3 +366,13 @@ restartButton.addEventListener("click", () => {
 });
 
 loadQuestion();
+
+/*
+AI Assistance:
+ChatGPT helped explain how addEventListener()
+handles click events, how textContent updates
+the displayed counter, and how CSS styles a
+circular div. AI assistance also helped organize
+and debug the JavaScript code.
+AI also help me with sound 
+*/
